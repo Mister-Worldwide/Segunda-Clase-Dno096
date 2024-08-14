@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <!--Busque su emoji en https://www.w3schools.com/html/html_emojis.asp-->
+        <title>🧙 ¡Segunda clase!</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
+        <Link rel="Stylesheet" href="style.css">
+      
+    </head>
+    <body>
+        <header>
+            <p>
+                <a href="index.html">Bienvenide</a> 
+                <a href="page.html" class="activo">Dibuje </a>
+            </p>    
+            <h1></h1>
+            <h2></h2>
+            <p>Tomé este curso porque siempre he querido acercarme a la programación, sin embargo mis intentos anteriores han terminado en fracaso. Es algo que encuentro muy útil e interesante y por esta misma razón no he querido rendirme con aprender sobre esta materia, por lo cual, tras escuchar recomendaciones de distintos compañeros, me decidí a tomar este curso.</p>           
+        </header>
+        <main>
+        </main>
+        <script>
+            var saludo = {
+               arriba: ["¡Hola mundo!","¡Hola universo!", "¡Hola orbe!", "¡Hola cosmos!", "Wena compare", "Qué pasa choroo","Qiubo mi hemano", "WASSAAAAAAA", "Qué pasa maquinola"],
+               abajo: ["Mi nombre es Vicente Robaldo"],
+            };
+            var titular;
+            var nombre;
+            function setup() {
+                createCanvas(windowWidth, windowHeight);
+                //selecciona un par de colores en https://materialui.co/colors
+                background('#4DB6AC');
+                stroke('#64FFDA');
+                titular = select('h1');
+                titular.html(random(saludo.arriba));
+                nombre = select('h2');
+                nombre.html(saludo.abajo);
+            }
+            function mouseDragged() {
+                line(pmouseX, pmouseY, mouseX, mouseY);
+            }
+            function draw() {
+              background('#4DB6AC');
+              textSize(48);
+              text("🧙", mouseX,mouseY);
+
+            }
+            function foto() {
+                saveCanvas('mi-dibujo.jpg');
+            }
+            function borra () {
+                background ('#4DB6AC');
+            }
+        </script>
+    </body>
+</html>
